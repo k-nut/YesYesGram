@@ -176,27 +176,27 @@ header {
     text-align: center;
     background-color: lightblue;
     border-radius: 0 0 20px 20px;
-    width: 400px;
+    width: 600px;
     height: 100px;
 }
 
 nav {
+    background-color: black;
     margin: 0 auto;
-    width: 400px;
-    background-color: red;
+    width: 600px;
+    text-align: left;
 }
-nav li,a {
+nav li,a, a:visited {
     display: inline;
     list-style-type: none;
     font-size: 30px;
-    color: black;
+    color: orange;
     text-decoration: none;
     padding: 10px;
 }
 
 #container {
     margin: 0 auto;
-    text-align: center;
 }
 
 #gamecontainer{
@@ -204,18 +204,21 @@ nav li,a {
     display: block;
 	font-family: 'Swanky and Moo Moo', arial, serif; 
 	font-size: 30px;
-    width: 400px;
+    width: 600px;
     text-align: center;
 }
 
 #message {
+    margin: 0 auto;
 	display:none;
 	text-align: center;
 	width: 400px;
 	height: 50px;
+    color: black;
     -moz-border-radius: 15px;
     border-radius: 15px;
 }
+
 
 table {
 	background-color: black;
@@ -240,6 +243,13 @@ td {
     display: none;
 }
 
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 25px;
+}
 
 
 
