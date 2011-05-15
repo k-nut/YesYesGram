@@ -169,6 +169,11 @@ a:hover { color: #036; }
  */
 body {
     margin: 0 auto;
+    background-image: url('/static/img/background.jpg');
+}
+
+#main {
+    margin: 0 auto;
 }
 
 header {
@@ -186,13 +191,19 @@ nav {
     width: 600px;
     text-align: left;
 }
-nav li,a, a:visited {
+nav li,nav a, nav a:visited {
     display: inline;
     list-style-type: none;
     font-size: 30px;
     color: orange;
     text-decoration: none;
     padding: 10px;
+}
+
+#about {
+    margin: 0 auto;
+    width: 600px;
+    background-color: white;
 }
 
 #container {

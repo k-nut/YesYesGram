@@ -11,7 +11,9 @@
        Remove this if you use the .htaccess -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
+  {% block title %}
   <title>Game Test - Again </title>
+  {% endblock %}
   <meta name="description" content="">
   <meta name="author" content="Knut Hühne">
 
@@ -46,11 +48,12 @@
     <nav>
         <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/about/">About</a></li>
+            <li><a href="/about">About</a></li>
             <li><a href="https://github.com/grumler/YesYesGram">Source</a></li>
         </ul>
     </nav>
     <div id="main" role="main">
+       {% block content %}
         <div id="gamecontainer">
             <table>
                 <tr>
@@ -73,6 +76,7 @@
             <button onclick="validate(input, {{solution}})">Lösung überprüfen</button>
             <div id="message"></div>
         </div>
+        {% endblock %}
     </div>
     <footer>
         <div id="length">{{length}}</div>

@@ -16,8 +16,9 @@ DEBUG = True
 app = Flask(__name__)
 app.config.from_object(__name__)
 
+
 @app.route('/')
-@app.route('/<number>')
+@app.route('/square/<number>')
 def show_entries(number=4):
     #cur = g.db.execute('select title, text from entries order by id desc')
     #entries = [dict(title=row[0], text=row[1]) for row in cur.fetchall()]
@@ -69,6 +70,10 @@ def show_entries(number=4):
     spalte = nspalte
         
     return render_template('index.html', fields=fields, row=row, solution=solution, spalte=spalte, length=len(solution))
+    
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 if __name__ == '__main__':
     app.run()
