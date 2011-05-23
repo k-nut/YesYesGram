@@ -1,3 +1,7 @@
+Playing the game
+================
+The game can be found on [http://yesyesgram.appspot.com](http://yesyesgram.appspot.com)
+
 About
 =====
 This is a nonogram style game which is still in it's very early days.
@@ -5,11 +9,9 @@ If you want to help out feel free to do so or to ask any questions!
 
 Installation
 ============
-In order to run the game you need the python web-microframework flask.
-You should be able to install it by using `easy_install flask`.
-After doing so change to the directory and just run `python game.py`
-The game will be started locally on port 5000.
+You can install the game locally by getting the Google App Enginge development framework and 
+dropping the folder inside it.
 
 Future
 ================
-Running the game on google app enginge when it is a little more stable is the next big goal.
+Getting more stability, a better design and more features into the games is the next goal.
