@@ -16,6 +16,7 @@ function validate(input, solution){
 		$("#message").css("display", "block");
 		$("#message").css("background-color", "green");
 		$("#message").text("Die Lösung war richtig")
+        document.getElementById('audiotag1').play();
 	}
 	
 	else {

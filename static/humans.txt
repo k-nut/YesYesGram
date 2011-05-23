@@ -3,7 +3,7 @@
 
 
 /* TEAM */
-  <your title>: <your name>
+  design & programming : Knut Hühne
   Site: 
   Twitter: 
   Location: 
@@ -14,7 +14,7 @@
 /* SITE */
   Standards: HTML5, CSS3
   Components: Modernizr, jQuery
-  Software:
+  Software: Flask-Engine: https://github.com/zachwill/flask-engine
   
 
                                     
