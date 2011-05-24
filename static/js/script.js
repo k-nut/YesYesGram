@@ -15,14 +15,14 @@ function validate(input, solution){
 	if (input.isEqualTo(solution)){
 		$("#message").css("display", "block");
 		$("#message").css("background-color", "green");
-		$("#message").text("Die Lösung war richtig")
+		$("#message").text("Your solution is correct")
         document.getElementById('audiotag1').play();
 	}
 	
 	else {
 		$("#message").css("display", "block");
 		$("#message").css("background-color", "red");
-		$("#message").text("Die Lösung war leider falsch");
+		$("#message").text("Oops, something is wrong with your solution");
 	};
 }
 
@@ -42,9 +42,7 @@ $(document).ready(function() {
 		
 		switch ($(this).css("background-color")){
 			case(colors["unselected"]):
-				$(this).animate ({
-					backgroundColor: colors["selected"]
-				});
+                $(this).css("background-color", colors["selected"]);
 				input[$(this).attr("id")-1] = 1;
 				$(this).text("X");
 				break;
