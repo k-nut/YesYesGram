@@ -262,7 +262,12 @@ h2 {
     font-size: 25px;
 }
 
-
+#howto-list {
+    font-size: 16px;
+    font-family: sans-serif;
+    text-align: left;
+    padding-bottom: 20px;
+    }
 
 
 

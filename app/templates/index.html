@@ -54,17 +54,15 @@
     </nav>
     <div id="main" role="main">
        {% block content %}
-	<!--
-       <h1 id="howto" > How to play </h1>
-       <ul> 
-            <li> To mark a field click on it once, it will turn green. </li>
-            <li> If you are sure that the field needs to stay empty click again and it will turn red. </li>
-            <li> If you click on a red field again it will turn change back to a white field and you can start again.</li>
-            <li>When you are done click the "Check solution" button. You only need to mark the right (green) fields but 
-            not the empty (red) ones.</li>
-        </ul>
-	-->
         <div id="gamecontainer">
+           <h1 id="howto" > How to play </h1>
+           <ul id="howto-list"> 
+                <li> To mark a field click on it once, it will turn green. </li>
+                <li> If you are sure that the field needs to stay empty click again and it will turn red. </li>
+                <li> If you click on a red field again it will turn change back to a white field and you can start again.</li>
+                <li>When you are done click the "Check solution" button. You only need to mark the right (green) fields but 
+                not the empty (red) ones.</li>
+            </ul>
             <table>
                 <tr>
                     <td class="rand"></td>
@@ -109,9 +107,7 @@
       jQuery(document).ready(function(){
           $('#howto').css('cursor', 'pointer')
             .click(function() {
-                $('#howto').not(this).next('ul').hide('slow');
-                $(this).next('p').toggle('slow');
-                return false;
+                $('#howto').next('ul').toggle('slow');
         }).next().hide(); // 
     })
     </script>

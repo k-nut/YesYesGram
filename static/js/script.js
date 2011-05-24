@@ -42,7 +42,9 @@ $(document).ready(function() {
 		
 		switch ($(this).css("background-color")){
 			case(colors["unselected"]):
-				$(this).css("background-color", colors["selected"]);
+				$(this).animate ({
+					backgroundColor: colors["selected"]
+				});
 				input[$(this).attr("id")-1] = 1;
 				$(this).text("X");
 				break;
