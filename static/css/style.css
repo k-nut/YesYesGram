@@ -169,7 +169,8 @@ a:hover { color: #036; }
  */
 body {
     margin: 0 auto;
-    background-image: url('/img/background.jpg');
+    /*background-image: url('/img/background.jpg');*/
+    background-color: hsl(0, 0%, 90%);
 }
 
 #main {
@@ -186,7 +187,7 @@ header {
 }
 
 nav {
-    background-color: black;
+    background-color: #ADAAAB;
     margin: 0 auto;
     width: 600px;
     text-align: left;
@@ -200,6 +201,14 @@ nav li,nav a, nav a:visited {
     padding: 10px;
 }
 
+footer {
+    background-color: #ADAAAB;
+    }
+    
+footer img{
+    padding-right: 20px;
+    }
+
 #about {
     margin: 0 auto;
     width: 600px;
@@ -208,6 +217,7 @@ nav li,nav a, nav a:visited {
 
 #container {
     margin: 0 auto;
+    width: 600px;
 }
 
 #gamecontainer{
@@ -237,8 +247,8 @@ table {
 }
 
 td {
-	width: 50px;
-	height: 50px;
+	min-width: 50px;
+	min-height: 50px;
 	background-color: rgb(255, 255, 255);
 	text-align: center;
     border: 1px solid black;
@@ -273,7 +283,9 @@ h2 {
     padding-bottom: 20px;
     }
 
-
+#solved-three {
+    display: none;
+    }
 
 
 
