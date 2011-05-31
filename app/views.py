@@ -18,8 +18,6 @@ views = Module(__name__, 'views')
 @views.route('/')
 @views.route('/square/<number>')
 def show_entries(number=4):
-    #cur = g.db.execute('select title, text from entries order by id desc')
-    #entries = [dict(title=row[0], text=row[1]) for row in cur.fetchall()]
     number = int(number)
     solution = []
     if number < 15:
@@ -72,3 +70,16 @@ def show_entries(number=4):
 @views.route('/about')
 def about():
     return render_template('about.html')
+    
+@views.after_request
+def add_header(response):
+    """Add header to force latest IE rendering engine and Chrome Frame."""
+    response.headers['X-UA-Compatible'] = 'IE=Edge,chrome=1'
+    return response
+
+
+@views.app_errorhandler(404)
+def page_not_found(error):
+    """Custom 404 page."""
+    return render_template('404.html'), 404
+
