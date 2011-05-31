@@ -62,7 +62,12 @@ $(document).ready(function() {
     for (var i = 0; i < parseInt($("#length").text()); i++){
         input.push(0);
     }
-    
+	var n = 1
+	$("td").each(function(){
+		$(this).attr("id", n);
+		n += 1
+	});
+
 	$("td").bind("click", function(){
 		//alert($(this).css("background-color"));
 		var colors = new Array();
