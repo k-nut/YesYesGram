@@ -73,18 +73,17 @@
             </div>
             <table>
                 <tr>
-                    <td class="rand"></td>
+                    <th class="rand"></th>
                 {%for element in row %}
-                    <td class="rand">{{element|replace("[", "")|replace("]", "")}}</td>
+                    <th class="rand">{{element|replace("[", "")|replace("]", "")}}</th>
                 {% endfor %}
                 </tr>
                 
                 {% for element in spalte %}
-                    {% set outerloop = loop.index0 %}
                     <tr> 
-                            <td class="rand">{{element|replace("[", "")|replace("]", "")}}</td>
+                            <th class="rand">{{element|replace("[", "")|replace("]", "")}}</th>
                         {% for n in range(0,fields-1) %}
-                            <td id="{{loop.index+outerloop*(fields-1)}}"></td>
+                            <td></td>
                         {% endfor %}
                     </tr>
                 {% endfor %}

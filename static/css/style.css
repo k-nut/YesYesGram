@@ -255,8 +255,12 @@ td {
 
 }
 
-.rand {
+th {
+    min-height: 50px;
+    min-width: 50px;
+    font-weight: thicker;
 	background-color: lightgrey;
+    border: 1px solid black;
 }
 
 #length {
