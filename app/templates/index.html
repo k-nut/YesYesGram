@@ -88,7 +88,8 @@
                     </tr>
                 {% endfor %}
             </table>
-            <button onclick="validate(input, {{solution}})">Check solution</button>
+            <button id="check" onclick="validate(input, {{solution}})">Check solution</button>
+            <button id="help" onclick="showHelp(input, {{solution}})" title="After clicking this button you will not be able to check your solution anymore"> Show solution</button>
             <audio id="audiotag1" src="/audio/correct.wav" preload></audio>
             <div id="message"></div>
         </div>

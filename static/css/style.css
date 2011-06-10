@@ -291,7 +291,11 @@ h2 {
     display: none;
     }
 
-
+#help {
+    display: none;
+    margin: 0 auto;
+    text-align: center;
+    }
 
 
 

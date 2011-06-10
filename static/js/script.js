@@ -1,3 +1,4 @@
+
 // Found this useful snippet here http://www.svendtofte.com/code/usefull_prototypes/
 Array.prototype.isEqualTo = function(arr) {
 	if (this.length != arr.length) return false;
@@ -35,7 +36,17 @@ function validate(input, solution){
 		$("#message").css("display", "block");
 		$("#message").css("background-color", "red");
 		$("#message").text("Oops, something is wrong with your solution");
+        $("#help").css("display", "block");
 	};
+}
+
+function showHelp(input, solution){
+    for (i=0; i<input.length; i++){
+        if (input[i] != solution[i]){
+            $("td").eq(i).css("background-color", "rgb(128, 0, 128)");
+            $("#check").css("display", "none");
+        }
+    }
 }
 
 function setCookie(c_name,value,exdays){
@@ -74,6 +85,7 @@ $(document).ready(function() {
 		colors["unselected"] = "rgb(255, 255, 255)"; // White
 		colors["selected"] = "rgb(0, 255, 0)"; // Green
 		colors["maybe"] = "rgb(255, 0, 0)"; 	// red
+        colors["help"] = "rgb(128, 0, 128)"; // purple
 		
 		switch ($(this).css("background-color")){
 			case(colors["unselected"]):
@@ -81,6 +93,13 @@ $(document).ready(function() {
 				input[$(this).attr("id")-1] = 1;
 				$(this).text("X");
 				break;
+                
+			case(colors["help"]):
+                $(this).css("background-color", colors["selected"]);
+				input[$(this).attr("id")-1] = 1;
+				$(this).text("X");
+				break;
+                
 			case(colors["selected"]):
 				$(this).css("background-color", colors["maybe"]);
 				input[$(this).attr("id")-1] = 0;
