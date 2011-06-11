@@ -71,6 +71,10 @@ def show_entries(number=4):
 def about():
     return render_template('about.html')
     
+@views.route('/select')
+def select():
+    return render_template('select.html')
+    
 @views.after_request
 def add_header(response):
     """Add header to force latest IE rendering engine and Chrome Frame."""

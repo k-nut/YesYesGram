@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+
+{% block title %}
+<title> YesYesGram - Select a puzzle </title>
+{% endblock %}
+
+{% block content %}
+Go ahead and try a 
+<ul>
+    {% for n in range(2,15) %}
+    <li> <a href="/square/{{n}}">{{n}}-by-{{n}}</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}
