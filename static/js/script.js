@@ -14,6 +14,8 @@ Array.prototype.isEqualTo = function(arr) {
 
 function validate(input, solution){
 	if (input.isEqualTo(solution)){
+        // Stop the timer
+        stopCount();
         // Display the message
 		$("#message").css("display", "block");
 		$("#message").css("background-color", "green");
@@ -67,9 +69,53 @@ function getCookie(c_name){
         }
       }
 }
+
+// Timer
+var timer_is_on=0;
+
+function returnTotal(){
+    var seconds = parseInt($("#seconds").text());
+    var minutes = parseInt($("#minutes").text());
+    var total = minutes*60 + seconds;
+    console.log(total);
+}
+
+function pad(n){
+    n = n + ""
+    if (n.length == 1){
+        n = 0 + n;
+    }
+
+    return n
+    }
+        
+    
+function timedCount(){
+    var seconds = parseInt($("#seconds").text());
+    var minutes = parseInt($("#minutes").text());
+    var total = minutes*60 + seconds;
+    
+    total=total+1;
+    $("#minutes").text(Math.floor(total / 60))
+    $("#seconds").text(total % 60);
+    t=setTimeout("timedCount()",1000);
+}
+
+function doTimer(){
+    if (!timer_is_on){
+      timer_is_on=1;
+      timedCount();
+    }
+}
+
+function stopCount(){
+    clearTimeout(t);
+    timer_is_on=0;
+}
+
 				
 $(document).ready(function() {
-    input = []
+    input = [];
     for (var i = 0; i < parseInt($("#length").text()); i++){
         input.push(0);
     }
@@ -79,6 +125,8 @@ $(document).ready(function() {
 		n += 1
 	});
 
+    doTimer();
+    
 	$("td").bind("click", function(){
 		//alert($(this).css("background-color"));
 		var colors = new Array();

@@ -59,6 +59,7 @@
        {% block content %}
         <div id="gamecontainer">
            <h1 id="howto" > How to play </h1>
+           <!-- Hidden on default -->
            <ul id="howto-list"> 
                 <li> To mark a field click on it once, it will turn green. </li>
                 <li> If you are sure that the field needs to stay empty click again and it will turn red. </li>
@@ -71,6 +72,8 @@
                     Maybe you would like to try a <a href="/square/5">five-by-five</a> or <a href="/square/7">seven-by-seven</a> field?
                 </p>
             </div>
+            <!-- Visible content starts here -->
+            <p>Time: <span id="minutes">00</span>:<span id="seconds">00</span></p>
             <table>
                 <tr>
                     <th class="rand"></th>
